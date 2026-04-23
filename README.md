@@ -1,41 +1,56 @@
-# Calypso Migration API (calypso-migration)
-API for managing and facilitating migration processes in Calypso systems
+# Calypso Migration (calypso-migration)
 
-**URL:** [Visit APIs.json URL](https://api.calypso-migration.example.com)
+Nasdaq Calypso Migration services support financial institutions in migrating data and configurations between Calypso environments. Calypso (formerly Adenza / Calypso Technology) is a cross-asset front-to-back capital markets technology platform used by banks, asset managers, central banks, and clearing houses worldwide. Migration capabilities cover upgrading between Calypso versions, moving between on-premise and cloud deployments, and consolidating multiple Calypso installations. These services are delivered through Nasdaq professional services rather than a public developer API.
 
-## Tags:
+**URL:** [Visit APIs.yml URL](https://raw.githubusercontent.com/api-evangelist/calypso-migration/refs/heads/main/apis.yml)
 
- - migration, calypso, data transfer, financial systems, treasury management
+## Scope
+
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Capital Markets
+- Data Migration
+- Financial Technology
+- Migration
+- Trading
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-23
 
 ## APIs
 
-### Calypso Migration API
-Core API for migrating data and configurations between Calypso environments
+### Calypso Migration
 
-**Human URL:** [https://calypso-migration.example.com](https://calypso-migration.example.com)
+Migration support for the Nasdaq Calypso capital markets platform, enabling migration of data and configurations between Calypso environments. Typical engagements cover version upgrades, data model transformations, environment consolidation, and cloud migration for banks, asset managers, central banks, and clearing houses running Calypso. These services are delivered through Nasdaq professional services and are not exposed through a self-serve public API.
 
+**Human URL:** [https://www.nasdaq.com/solutions/fintech/nasdaq-calypso](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
 
-#### Tags:
+#### Tags
 
- - migration, data-transfer, calypso
+- Capital Markets
+- Data Migration
+- Migration
 
 #### Properties
 
-- [Documentation](https://docs.calypso-migration.example.com)
-- [OpenAPI](https://api.calypso-migration.example.com/v1/openapi.json)
-- [Authentication](https://docs.calypso-migration.example.com/auth)
-- [Pricing](https://calypso-migration.example.com/pricing)
-- [Terms of Service](https://calypso-migration.example.com/terms)
-- [Support](https://support.calypso-migration.example.com)
-- [Status](https://status.calypso-migration.example.com)
+- [Documentation](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
+
+## Common Properties
+
+- [Website](https://www.calypso.com/)
+- [Portal](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
+- [Privacy Policy](https://www.calypso.com/Privacy)
+- [Terms of Service](https://km.calypso.com/pages/terms)
+- [Learning](https://learncalypso.nasdaq.com/)
 
 ## Maintainers
 
-**FN:** Calypso Migration Team
+**FN:** Kin Lane
 
-**Email:** api-team@calypso-migration.example.com
+**Email:** kin@apievangelist.com
