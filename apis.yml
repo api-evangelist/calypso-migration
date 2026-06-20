@@ -9,7 +9,7 @@ tags:
   - Migration
   - Trading
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-01-15'
 modified: '2026-04-23'
@@ -31,7 +31,7 @@ apis:
       - Data Migration
       - Migration
     humanURL: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     properties:
       - url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
         type: Documentation
