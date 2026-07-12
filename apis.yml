@@ -44,6 +44,8 @@ apis:
       Calypso. These services are delivered through Nasdaq professional
       services and are not exposed through a self-serve public API.
 common:
+  - type: DomainSecurity
+    url: security/calypso-migration-domain-security.yml
   - type: Website
     url: https://www.calypso.com/
   - type: Portal
