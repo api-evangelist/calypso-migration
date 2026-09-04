@@ -36,7 +36,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/calypso-mi
 access: 3rd-Party
 created: '2024-01-15'
 modified: '2026-04-23'
-position: Consumer
+position: Consuming
 description: >-
   Nasdaq Calypso Migration services support financial institutions in migrating
   data and configurations between Calypso environments. Calypso (formerly
