@@ -35,7 +35,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/calypso-migration.png
 access: 3rd-Party
 created: '2024-01-15'
-modified: '2026-04-23'
+modified: '2026-09-05'
 position: Consuming
 description: >-
   Nasdaq Calypso Migration services support financial institutions in migrating
@@ -53,10 +53,10 @@ apis:
       - Capital Markets
       - Data Migration
       - Migration
-    humanURL: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
+    humanURL: https://www.nasdaq.com/products/fintech/calypso
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     properties:
-      - url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
+      - url: https://www.nasdaq.com/products/fintech/calypso
         type: Documentation
     description: >-
       Migration support for the Nasdaq Calypso capital markets platform,
@@ -69,17 +69,54 @@ apis:
 common:
   - type: DomainSecurity
     url: security/calypso-migration-domain-security.yml
+  - type: VulnerabilityDisclosure
+    url: security/calypso-migration-vulnerability-disclosure.yml
+  - type: Security
+    url: security/calypso-migration-vulnerability-disclosure.yml
+  - type: SecurityTxt
+    url: well-known/calypso-migration-security.txt
+  - type: Lifecycle
+    url: lifecycle/calypso-migration-lifecycle.yml
+  - type: LLMsTxt
+    url: llms/calypso-migration-llms.txt
   - type: Website
-    url: https://www.calypso.com/
-  - type: Portal
-    url: https://www.nasdaq.com/solutions/fintech/nasdaq-calypso
+    url: https://www.nasdaq.com/products/fintech/calypso
   - type: PrivacyPolicy
-    url: https://www.calypso.com/Privacy
+    url: https://www.nasdaq.com/privacy-statement
   - type: TermsOfService
-    url: https://km.calypso.com/pages/terms
-  - type: Learning
-    url: https://learncalypso.nasdaq.com/
+    url: https://www.nasdaq.com/legal
+  - type: Training
+    url: https://calypsoeducation.nasdaq.com/
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Nasdaq Calypso's API and migration-tooling reference is issued only to
+    licensed institutions through the Calypso support and client ITSM portals —
+    the public nasdaq.com Calypso pages are marketing that end in a Contact Us
+    form, and the old documentation domain www.calypso.com now refuses
+    connections on both port 80 and port 443.
+  evidence:
+    - url: https://www.nasdaq.com/products/fintech/calypso/delivery-management-and-services
+      status: 200
+    - url: https://www.calypso.com/
+      status: 0
+    - url: https://support.calypso.com/
+      status: 0
+    - url: https://www.nasdaq.com/openapi.json
+      status: 404
+    - url: https://www.nasdaq.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-05'
+x-parent: nasdaq-omx-group
+x-relationship: acquisition
+x-acquired: 2021

@@ -1,0 +1,131 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of every host this record knows — the
+  registrable domain calypso.com and www, the Nasdaq product/portal host
+  www.nasdaq.com, and the two Calypso education hosts (km.calypso.com,
+  learncalypso.nasdaq.com). No API baseURL or OpenAPI servers[] host exists for
+  this record to probe (see x-coverage in apis.yml).
+provider: Calypso Migration
+providerId: calypso-migration
+description: >-
+  Well-known / discovery-document probe for the Nasdaq Calypso Migration
+  surface. The only real document served anywhere on these hosts is Nasdaq's
+  security.txt, and it is published at the legacy root path
+  https://www.nasdaq.com/security.txt rather than at RFC 9116's
+  /.well-known/security.txt, which 404s. Every /.well-known/ API-discovery path
+  (api-catalog, ai-plugin.json, agent-card.json, agent.json,
+  oauth-authorization-server) returns 404 on every host. The two 200s on
+  /.well-known/openid-configuration belong to Thinkific, the SaaS learning
+  platform behind the Calypso education sites, not to Nasdaq or Calypso — see
+  the note on those entries.
+hosts:
+  - host: www.nasdaq.com
+    note: >-
+      Nasdaq Calypso's product, marketing and legal host. Serves a real
+      security.txt, but at /security.txt — the pre-RFC-9116 root location.
+    documents:
+      - path: /security.txt
+        status: 200
+        file: calypso-migration-security.txt
+        content_type: text/plain
+        note: >-
+          Real RFC 9116-shaped document (Contact + Acknowledgements) pointing at
+          Nasdaq's Synack-run responsible disclosure program. Served at the
+          legacy root path, NOT under /.well-known/.
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: km.calypso.com
+    note: >-
+      CNAME to calypso-university.thinkific.com; 301s to
+      calypsoeducation.nasdaq.com. The Calypso University learning portal.
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: calypso-migration-km-openid-configuration.json
+        content_type: application/json
+        owner: third-party
+        note: >-
+          NOT a Calypso or Nasdaq API surface. issuer is
+          https://courses.thinkific.com — this is the Thinkific SaaS learning
+          platform's own OIDC discovery document, surfaced under a Nasdaq vanity
+          hostname. Saved as evidence; deliberately NOT wired to a WellKnown
+          pointer, because the pointer would assert that this provider publishes
+          an API discovery surface, and it does not.
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: learncalypso.nasdaq.com
+    note: >-
+      CNAME to km-internal.thinkific.com. Nasdaq Calypso Learning Service.
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        owner: third-party
+        note: >-
+          Same Thinkific platform document as km.calypso.com (issuer
+          https://courses.thinkific.com). Not saved separately; not pointed at.
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: www.calypso.com
+    note: >-
+      Calypso Technology's former primary domain. DNS still resolves
+      (72.167.45.186, a GoDaddy address) but the host answers on NEITHER port 80
+      NOR port 443 — both connections time out. Every probe below is a connection
+      failure, not an HTTP response.
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        note: connection timed out (no TCP handshake on 443)
+      - path: /.well-known/api-catalog
+        status: 0
+        note: connection timed out
+      - path: /.well-known/openid-configuration
+        status: 0
+        note: connection timed out
+      - path: /.well-known/oauth-authorization-server
+        status: 0
+        note: connection timed out
+      - path: /.well-known/ai-plugin.json
+        status: 0
+        note: connection timed out
+      - path: /.well-known/agent-card.json
+        status: 0
+        note: connection timed out
+      - path: /.well-known/agent.json
+        status: 0
+        note: connection timed out
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

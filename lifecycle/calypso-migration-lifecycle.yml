@@ -1,0 +1,73 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://www.nasdaq.com/products/fintech/calypso ,
+  https://www.nasdaq.com/products/fintech/calypso/delivery-management-and-services ,
+  https://www.nasdaq.com/products/fintech/calypso/resources
+provider: Calypso Migration
+providerId: calypso-migration
+description: >-
+  Lifecycle posture for Nasdaq Calypso Migration. This artifact records an
+  ABSENCE that was searched for, not a policy that was found: Nasdaq publishes
+  no public API versioning policy, no deprecation policy, no Sunset/Deprecation
+  header contract, no SLA document and no status page for the Calypso platform
+  or for its migration and upgrade services. Version and release management for
+  Calypso is handled per-client inside the licensed engagement.
+versioning:
+  scheme: null
+  policy_url: null
+  public: false
+  note: >-
+    Calypso is versioned as licensed on-premise / CapCloud software with
+    client-scheduled rebases, not as a public API. Nasdaq markets "Upgrade as a
+    Service" — automation and execution of regular rebases and upgrades of a
+    client's on-premise Calypso instance — but publishes no version numbers,
+    release cadence, or support-window matrix on any public page.
+deprecation:
+  policy_url: null
+  policy_published: false
+  rfc8594_headers: false
+  sunset_header: false
+  deprecated_operations: []
+  note: >-
+    No deprecation policy is published, and there is no public contract from
+    which deprecated operations could be derived (no OpenAPI exists for this
+    record).
+sla:
+  published: false
+  url: null
+  note: >-
+    Service levels for Calypso delivery and support are negotiated per client
+    and administered through Nasdaq's online client ITSM portal, which is
+    customer-only. No public SLA document was found.
+status_page:
+  published: false
+  url: null
+  evidence:
+    - url: https://status.nasdaq.com/
+      status: 0
+      note: NXDOMAIN — host does not resolve
+  note: >-
+    No public status page exists for Nasdaq Calypso. Platform health is reported
+    to licensed clients through the ITSM portal.
+support:
+  public_channel: false
+  note: >-
+    support.calypso.com resolves via CNAME to a Salesforce Community
+    (calypso.com.00d14000001aq81eae.live.siteforce.com) but the hostname itself
+    returns NXDOMAIN to a public resolver, so no public support surface is
+    reachable. Nasdaq's published route is a "Contact Us" form on the product
+    page.
+evidence:
+  - url: https://www.nasdaq.com/products/fintech/calypso/delivery-management-and-services
+    status: 200
+    checked: '2026-09-05'
+  - url: https://status.nasdaq.com/
+    status: 0
+    checked: '2026-09-05'
+  - url: https://support.calypso.com/
+    status: 0
+    checked: '2026-09-05'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

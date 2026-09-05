@@ -1,0 +1,4 @@
+# If you would like to report a security issue,
+# you may report it to us on Synack
+Contact: https://nasdaq.responsibledisclosure.com/hc/en-us
+Acknowledgements: https://nasdaq.responsibledisclosure.com/hc/en-us/articles/360022894593

@@ -3,90 +3,47 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: Calypso Migration
 providerId: calypso-migration
+generated: '2026-09-05'
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-05'
+method: searched
+source: >-
+  https://www.nasdaq.com/products/fintech/calypso ,
+  https://www.nasdaq.com/products/fintech/calypso/delivery-management-and-services
+supersedes: >-
+  This file replaces a 2026-05-04 bulk-sweep scaffold that invented free /
+  professional / enterprise limits (10, 100 and 1,000 requests per minute, with
+  bursts and monthly quotas) and an X-RateLimit-* / Retry-After header contract,
+  for an API that has no public endpoint. Nasdaq has never published any of it.
+  The invented values are removed rather than carried forward.
+limit_count: 0
+limits_published: false
+headers: {}
+responseCodes: {}
 tags:
   - Capital Markets
   - Data Migration
   - Financial Technology
   - Migration
-  - Trading
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Calypso Migration API surface. Captures per-tier
-  quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to
-  be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Calypso Migration
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Calypso Migration
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Calypso Migration
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Calypso Migration
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Calypso Migration
-policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - Trading
+description: >-
+  No rate limits are published for Calypso Migration, and there is no public API
+  surface for a limit to apply to. Contract discovery on 2026-09-05 found no
+  OpenAPI, Swagger, GraphQL, AsyncAPI or MCP endpoint on any host this record
+  knows, and no baseURL could be established. Nasdaq Calypso's platform APIs are
+  reachable only by licensed institutions through the customer support and
+  client ITSM portals, where any throttling contract would also live. An honest
+  zero, not an unmeasured one.
+limits: []
+policies: []
+evidence:
+  - url: https://www.nasdaq.com/openapi.json
+    status: 404
+    checked: '2026-09-05'
+  - url: https://www.nasdaq.com/products/fintech/calypso/delivery-management-and-services
+    status: 200
+    checked: '2026-09-05'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
