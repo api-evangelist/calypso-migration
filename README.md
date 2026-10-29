@@ -1,4 +1,4 @@
-# Calypso Migration (calypso-migration)
+# Calypso Migration
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,55 +66,102 @@
 
 Nasdaq Calypso Migration services support financial institutions in migrating data and configurations between Calypso environments. Calypso (formerly Adenza / Calypso Technology) is a cross-asset front-to-back capital markets technology platform used by banks, asset managers, central banks, and clearing houses worldwide. Migration capabilities cover upgrading between Calypso versions, moving between on-premise and cloud deployments, and consolidating multiple Calypso installations. These services are delivered through Nasdaq professional services rather than a public developer API.
 
-**URL:** [Visit APIs.yml URL](https://raw.githubusercontent.com/api-evangelist/calypso-migration/refs/heads/main/apis.yml)
+**Areas:** Capital Markets · Data Migration · Financial Technology · Migration · Trading
 
-## Scope
+## Calypso Migration on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Calypso Migration is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/calypso-migration/](https://apis.io/providers/calypso-migration/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Capital Markets
-- Data Migration
-- Financial Technology
-- Migration
-- Trading
+- [Calypso Migration](https://apis.io/apis/calypso-migration/calypso-migration/) — Migration support for the Nasdaq Calypso capital markets platform, enabling migration of data and configurations between Calypso environments. Typical…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (2)
 
-### Calypso Migration
+Authentication, trust centre, and vulnerability disclosure.
 
-Migration support for the Nasdaq Calypso capital markets platform, enabling migration of data and configurations between Calypso environments. Typical engagements cover version upgrades, data model transformations, environment consolidation, and cloud migration for banks, asset managers, central banks, and clearing houses running Calypso. These services are delivered through Nasdaq professional services and are not exposed through a self-serve public API.
+- [Calypso Migration Domain Security](https://apis.io/security/calypso-migration/calypso-migration-domain-security/)
+- [Calypso Migration Vulnerability Disclosure](https://apis.io/security/calypso-migration/calypso-migration-vulnerability-disclosure/)
 
-**Human URL:** [https://www.nasdaq.com/solutions/fintech/nasdaq-calypso](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Capital Markets
-- Data Migration
-- Migration
+- [Calypso Migration Plans Pricing](https://apis.io/plans/calypso-migration/calypso-migration-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
+Published request limits.
 
-## Common Properties
+- [Calypso Migration Rate Limits](https://apis.io/rate-limits/calypso-migration/calypso-migration-rate-limits/)
 
-- [Website](https://www.calypso.com/)
-- [Portal](https://www.nasdaq.com/solutions/fintech/nasdaq-calypso)
-- [Privacy Policy](https://www.calypso.com/Privacy)
-- [Terms of Service](https://km.calypso.com/pages/terms)
-- [Learning](https://learncalypso.nasdaq.com/)
+#### FinOps (1)
 
-## Maintainers
+What the API costs to run, by operation.
 
-**FN:** Kin Lane
+- [Calypso Migration Finops](https://apis.io/finops/calypso-migration/calypso-migration-finops/)
 
-**Email:** kin@apievangelist.com
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nasdaq.com/products/fintech/calypso)
+- [Terms of service](https://www.nasdaq.com/legal)
+- [Privacy policy](https://www.nasdaq.com/privacy-statement)
+
+## API Evangelist rating
+
+**Kin Score 11.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 10.5 |
+
+**Agent readiness 13.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.9** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/calypso-migration/](https://apis.io/providers/calypso-migration/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Calypso Migration: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/calypso-migration/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
